@@ -9,7 +9,7 @@ another dumb project of mine. ive only made this since i havent seen any public 
 - [x] Cleaned uasset subtitles file
 - [x] trash clean-uasset-subtitle-file converter to json
 - [x] JSON-format subtitles file
-- [ ] HTML-format view subtitles
+- [x] HTML-format view subtitles (kinda bad tho, would like someone to make a better looking one)
 
 Locations of original uasset and uexp files are `/Game/Data/Localizations/Loc_Subtitles.uasset` and `/Game/Data/Localizations/Loc_Subtitles.uexp`
 

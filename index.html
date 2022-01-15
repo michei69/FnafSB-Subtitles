@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.style = localStorage.getItem("style")
+        if (window.style == null){
+            window.style = "default"
+            localStorage.setItem("style", window.style)
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            background-color: rgb(50,50,50);
+        }
+        #main{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+        .default{
+            width:80%;
+            background-color:rgb(15,15,15);
+            min-height:4rem;
+            margin-top: 2rem;
+            margin-bottom: -1rem;
+            border: solid rgb(200,200,200) 2px;
+            border-radius: 2rem;
+            display:flex;
+            flex-direction:row;
+        }
+
+        .default h1{
+            color: white;
+            font-family: "Roboto", sans-serif;
+            margin:1rem;
+            margin-right: .5rem;
+            font-size:1.5rem;
+        }
+
+        .default p{
+            color: white;
+            font-family: "Roboto", sans-serif;
+            margin:auto;
+            font-size:1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- <div class="line default">
+            <h1>Loc_Subtitle_HUB_Showtime_0001:</h1>
+            <p>(Announcer) Ladies and gentlemen, boys and girls, Fazbear Entertainment would like you to put your hands together for the one, the only, Freddy Fazbear! </p>
+        </div>
+        <div class="line default">
+
+        </div> -->
+    </div>
+    <script>
+        var maindiv = document.getElementById("main")
+        let tempfile = new XMLHttpRequest()
+        var data = ""
+        var reverseddata = ""
+        
+        tempfile.overrideMimeType("application/json")
+        tempfile.open("GET", "./FNaFSB FullScript.json", true)
+        tempfile.onreadystatechange = () => {
+            if (tempfile.readyState === 4 && tempfile.status == "200"){
+                data = JSON.parse(tempfile.responseText)
+                onData()
+            }
+        }
+        tempfile.send(null)
+
+        function onData(){
+            console.log(data)
+            load(data, reverseddata)
+        }
+        
+        function defaultAddDiv(title, text){
+            let susta = document.createElement("div")
+            susta.classList.add("line")
+            susta.classList.add("default")
+            let first = document.createElement("h1")
+            first.innerHTML = title
+            let second = document.createElement("p")
+            second.innerHTML = text
+            maindiv.appendChild(susta)
+            susta.appendChild(first)
+            susta.appendChild(second)
+        }
+
+        function load(data, rev){
+            for (h in data){
+                switch(window.style){
+                    case "default":
+                        defaultAddDiv(h, data[h])
+                        break
+                    default:
+                        defaultAddDiv(h, data[h])
+                        break
+                }
+            }
+        }
+    </script>
+</body>
+</html>

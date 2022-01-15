@@ -1,5 +1,5 @@
 # I DO NOT TAKE ANY CREDIT FROM THE CONTENTS OF THIS REPOSITORY 
-### ALL OF THE FILES HERE ARE PROPERTY OF STEEL WOOD STUDIOS AND PART OF THEIR GAME [Five Nights at Freddy's Security Breach](https://store.steampowered.com/app/747660/Five_Nights_at_Freddys_Security_Breach/) - I DO NOT OWN ANYTHING
+### ALL OF THE FILES HERE ARE PROPERTY OF STEEL WOOD STUDIOS & SCOTTGAMES AND PART OF THEIR GAME [Five Nights at Freddy's Security Breach](https://store.steampowered.com/app/747660/Five_Nights_at_Freddys_Security_Breach/) - I DO NOT OWN ANYTHING
 
 
 ## Dumped FNaF SB voice lines from game files
